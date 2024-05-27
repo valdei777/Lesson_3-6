@@ -86,7 +86,7 @@ public class Task_7 {
 
     public static void saveFile (String url, String name){
         try (InputStream stream = new URL(url).openStream()) {
-            Files.copy(stream, Paths.get("files/" + name + ".jpg"));
+            Files.copy(stream, Paths.get(name + ".jpg"));
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
